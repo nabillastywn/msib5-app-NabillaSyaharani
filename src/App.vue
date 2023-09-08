@@ -1,49 +1,75 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-const defaultFontFamily = "Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif"; // Define the font family
+import { RouterView } from 'vue-router'
+import './tailwind.css'
+import './main.ts'
+import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <div class="main h-screen">
-    <div class="wrapper">
-      <nav class="nav">
-        <ul>
-          <li><router-link class="nav-link" to="/" :class="{ 'active': $route.path === '/' }">Home</router-link></li>
-          <li><router-link class="nav-link" to="/todo" :class="{ 'active': $route.path === '/todo' }">Todo</router-link></li>
-          <li><router-link class="nav-link" to="/about" :class="{ 'active': $route.path === '/about' }">About</router-link></li>
-        </ul>
-      </nav>
-      <span class="line"></span>
-      <router-view />
-    </div>
+  <div class="bg-white">
+    <Navbar />
+    <!-- Use the Navbar component here -->
+    <router-view />
+    <!-- Include the Footer component here -->
+    <Footer />
   </div>
 </template>
 
+
+<!-- <template>
+  <div class=" w-[1440px] bg-gradient-to-r from-primary to-secondary h-screen flex flex-col justify-center items-center"> -->
+    <!-- Logo and Nav Links in a row -->
+    
+      <!-- <div class="flex flex-col items-center h-80 text-white text-center space-y-4">
+        <div class="logo">
+        <img src="./assets/img/Content.png" alt="Logo" class="h-8 w-8" />
+        <img src="./assets/img/Logotype.png" alt="Logo" class="h-8 w-8" />
+        <router-link to="/" class="mt-2">Home</router-link>
+        <router-link to="/todo" class="mt-2">Todo</router-link>
+        <router-link to="/about" class="mt-2">About</router-link>
+      </div>
+      </div> -->
+
+      <!-- Add margin to the main content -->
+      <!-- <div class="wrapper">
+      <div class="main-content">
+        <router-view />
+      </div>
+    </div>
+  </div>
+</template> -->
+
 <style scoped>
-.main {
-  font-family: var(--defaultFontFamily); /* Use the defined font family */
-  /* ... other styles ... */
+.bg-gradient-to-r {
+  background: linear-gradient(to bottom, #D8EEFD, #ffffff);
+}
+
+/* .main {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: #242424 !important;
   color-scheme: light dark;
-  color: white;
 }
 
 .wrapper {
-  margin: 12px;
+  font-family: 'Poppins', sans-serif;
+  margin: 30px 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 80vw;
   gap: 24px;
 }
 
-.line {
-  background-color: white;
-  height: 1px;
-  width: 100%;
+/* Add margin to the router-link elements */
+/* .router-link {
+  margin-top: 100px;
+} */
+
+/* .main-content {
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .nav {
@@ -57,15 +83,13 @@ const defaultFontFamily = "Poppins, system-ui, Avenir, Helvetica, Arial, sans-se
   list-style-type: none;
   display: flex;
   gap: 280px;
-  margin: 0;
 }
 
 .nav-link {
-  padding: 10px;
   color: white;
   text-decoration: none;
   font-weight: normal;
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Set the font family */
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-link.active {
@@ -74,5 +98,5 @@ const defaultFontFamily = "Poppins, system-ui, Avenir, Helvetica, Arial, sans-se
 
 .nav-link:hover {
   opacity: 0.8;
-}
+} */
 </style>

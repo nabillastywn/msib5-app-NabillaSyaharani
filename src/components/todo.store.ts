@@ -1,4 +1,4 @@
-// src/store/todo.store.ts
+// src/components/todo.store.ts
 import { defineStore } from 'pinia'
 import axios from 'axios'
 

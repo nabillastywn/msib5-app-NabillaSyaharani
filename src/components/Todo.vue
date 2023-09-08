@@ -45,8 +45,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main h-screen">
-    <div class="flex flex-col items-center w-[100%] h-full font-sans">
+    <div class="flex flex-col items-center font-sans">
       <div class="title mt-4">Todos</div> <!-- Add margin-top to the title -->
 
       <div class="w-full mt-4"> <!-- Add margin-top to the input container -->
@@ -108,7 +107,6 @@ onMounted(() => {
 
 
 </div>
-  </div>
 </template>
 
 <!-- ... rest of your script and style sections ... -->
